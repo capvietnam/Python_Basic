@@ -15,7 +15,7 @@ for people in peoples:
     for skate in skates:
         if skate >= people:
             quanitu += 1
-    if quanitu >  max_quanitu:
+    if quanitu > max_quanitu:
         max_quanitu = quanitu
     quanitu = 0
 
