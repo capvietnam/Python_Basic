@@ -1,10 +1,7 @@
-# TODO здесь писать код
-
-text = input('Введите текст: ')
 list_symbols = []
-vowels = ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
-for i in text:
-    if i in vowels:
+
+for i in input('Введите текст: '):
+    if i in ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']:
         list_symbols.append(i)
 
 print('Список гласных букв:', list_symbols)
