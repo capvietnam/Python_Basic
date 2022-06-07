@@ -6,7 +6,7 @@ for i in range(number):
 
 counter = 0
 while list_number != list_number[::-1]:
-    list_number.append(list_number[counter])
+    list_number.insert(number, list_number[counter])
     counter += 1
 
 print('Нужно приписать чисел:', counter)
