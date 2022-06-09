@@ -2,8 +2,8 @@ def get_max_len_word(string_list):
    return sorted(string_list, key=len)[-1]
 
 
-word_list = input('Введите строку: ').split()
-max_word = get_max_len_word(string_list=word_list)
+string_list = input('Введите строку: ').split()
+string_word = get_max_len_word(string_list=string_list)
 
-print('Самое длинное слово:', max_word, '\nДлина этого слова:', len(max_word))
+print('Самое длинное слово:', string_word, '\nДлина этого слова:', len(string_word))
 
