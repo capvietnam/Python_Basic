@@ -1,3 +1,4 @@
+
 dict_word = dict()
 True_text = ''
 isl_text = ''
@@ -5,6 +6,7 @@ text = input('Сообщение: ').split()
 
 
 """"Ищем где внутри слов есть символы (отличные от букв) и переворачиваем относительно символа"""
+
 for i in text:
     if i[0:-2].isalpha() == False and True in list(k.isalpha() for k in i):
         for s in i:
@@ -12,6 +14,7 @@ for i in text:
                 t = i.split(s)
                 True_text = t[0][::-1] + s + t[1][::-1]
                 dict_word[i] = True_text
+
 
 
 """"Создаем список со значениями и переворачиваем без учета символа"""
