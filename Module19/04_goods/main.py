@@ -24,4 +24,11 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+for key_good in goods.keys():
+    prise_all = 0
+    quntity_good = 0
+    good = goods.get(key_good)
+    for list_in_stor in store[good]:
+        prise_all += list_in_stor['quantity'] * list_in_stor['price']
+        quntity_good += list_in_stor['quantity']
+    print(f'{key_good} — {quntity_good} штук, стоимость {prise_all} рубля')
