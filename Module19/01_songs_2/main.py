@@ -9,5 +9,12 @@ violator_songs = {
     'Blue Dress': 4.29,
     'Clean': 5.83
 }
+oll_time = 0
+for i in range(int(input('Сколько песен выбрать? '))):
+    while True:
+        name = input(f'Название {i+1} песни: ')
+        if name in violator_songs.keys():
+            oll_time += violator_songs.setdefault(name)
+            break
+print('\nОбщее время звучания песен:', round(oll_time, 2), 'минуты')
 
-# TODO здесь писать код
