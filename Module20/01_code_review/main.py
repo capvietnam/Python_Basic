@@ -19,26 +19,14 @@ students = {
     }
 }
 
+set_interests = set()
+len_all_surname = 0
+list_id_old = list((id_student, value['age']) for id_student, value in students.items())
 
-def f(dict):
-    lst = []
-    string = ''
-    for i in dict:
-        lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
+for key in students.keys():
+    len_all_surname += len(students[key]['surname'])
+    set_interests.update(students[key]['interests'])
 
-
-pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
-
-
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
-
-# TODO исправить код
+print('Список пар "ID студента — возраст":', list_id_old)
+print('Полный список интересов всех студентов:', set_interests)
+print('Общая длина всех фамилий студентов:', len_all_surname)
