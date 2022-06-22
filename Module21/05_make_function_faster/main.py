@@ -6,8 +6,7 @@
     # result = result ** 10
     # return result
 
-answer = {}
-def calculating_math_func(data):
+def calculating_math_func(data, answer={}):
     if data in answer.keys():
         return answer[data]
     result = 1
@@ -20,4 +19,4 @@ def calculating_math_func(data):
     return result
 
 while True:
-    calculating_math_func(int(input('Введите число: ')))
+    calculating_math_func(data=int(input('Введите число: ')))
