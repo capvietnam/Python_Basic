@@ -8,5 +8,8 @@ while True:
         with open('messenger.txt', 'a', encoding='utf-8') as file:
             file.write(name + ': ' + input('Ввведите текст')+ '\n')
     elif action == '1':
-        with open('messenger.txt', 'r', encoding='utf-8') as file:
-            print(file.read())
+        try:
+            with open('messenger.txt', 'r', encoding='utf-8') as file:
+                print(file.read())
+        except FileNotFoundError:
+            print('пока нету истории')
