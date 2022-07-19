@@ -4,19 +4,19 @@ from math import pi
 class MyMath:
 
     @staticmethod
-    def circle_len(radius: (int, float)) -> (int, float):
+    def circle_len(radius: int | float) -> int | float:
         return 2 * radius * pi
 
     @staticmethod
-    def circle_sq(radius: (int, float)) -> (int, float):
+    def circle_sq(radius: int | float) -> int | float:
         return radius * pow(pi, 2)
 
     @staticmethod
-    def cube_volume(side: (int, float)) -> (int, float):
+    def cube_volume(side: int | float) -> int | float:
         return pow(side, 3)
 
     @staticmethod
-    def surface_area_sphere(radius: (int, float)) -> (int, float):
+    def surface_area_sphere(radius: int | float) -> int | float:
         return 4 * pi * pow(radius, 3)
 
 
