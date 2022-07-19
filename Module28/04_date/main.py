@@ -5,8 +5,8 @@ class Date:
         self.year = year
 
     @staticmethod
-    def from_string(date: str):
-        day, month, year = date.split('-')
+    def from_string(date_adjustment: str):
+        day, month, year = date_adjustment.split('-')
         return Date(day, month, year)
 
     def get_date(self):
@@ -20,6 +20,7 @@ class Date:
 
     def __str__(self):
         return f'День: {self.day}\tМесяц: {self.month}\tГод: {self.year}'
+
 
 date = Date.from_string('10-12-2077')
 print(date)
